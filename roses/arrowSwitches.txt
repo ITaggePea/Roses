@@ -6,6 +6,7 @@
 12 normal dad
 28 majin dad
 32 normal dad
+40 agoti dad
 42 Cj-Ruby bf
 
 

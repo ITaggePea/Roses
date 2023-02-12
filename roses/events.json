@@ -1,0 +1,16 @@
+{
+	"song": {
+		"events": [
+			[
+				8000,
+				[
+					[
+						"Change Stage",
+						"senpaiHD",
+						""
+					]
+				]
+			]
+		]
+	}
+}
