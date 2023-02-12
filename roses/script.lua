@@ -87,47 +87,88 @@ useDoubleBFIcons = false
 
 
 function onStepHit(step)
-	if curStep == 515 then
-        useDoubleDadIcons = true
-        useDoubleBFIcons = true
+     if curStep == 64 then
+         cameraFlash('game', '0xFFFFFFFF', 0.7)
+         changeDadAuto('2vplus-senpai-angry')
+         changeStage('senpaihd')
+         changeBFAuto('bf')
+         changeGFAuto('gf')
+         setupNoteSplash('-normal')
+         changeStaticNotes('normal', 'normal')
+     end
 
-        cameraFlash('game', '0xFFFFFFFF', 0.7, true)
-        setProperty('dad1.alpha', 1)
-        setProperty('iconP3.alpha', 1)
-        setProperty('iconP4.alpha', 1)
-    end
+     if curStep == 132 then
+        changeDadAuto('botan')
+        setupNoteSplash('-holofunk')
+     end
 
-	if curStep == 515 then
-        makeLuaCharacter('boyfriend1', 'bf-gfV2', true, false)
-	   setProperty('boyfriend1.x', getProperty('boyfriend1.x') + 200)
-        setObjectOrder('boyfriend1', getObjectOrder('boyfriend') - 1)
+     if curStep == 164 then
+         changeBFAuto('pico')
+     end
+    
+     if curStep == 192 then
+         changeDadAuto('shaggy')
+     end
 
-        makeHealthIcon('bfIcon1', 'gf', true)
-        setObjectOrder('bfIcon1', getObjectOrder('iconP1') + 1)
-        setProperty('bfIcon1.alpha', 0)
+     if curStep == 224 then
+         changeBFAuto('blantados-new')
+     end
+
+     if curStep == 256 then
+         changeDadAuto('beast-sonic')
+     end
+
+     if curStep == 288 then
+         changeBFAuto('soul-tails')
+     end
+
+     if curStep == 320 then
+         changeDadAuto('tricky')   
+     end
+
+     if curStep == 352 then
+         changeBFAuto('tord-c')
+     end
+    
+     if curStep == 384 then
+         changeDadAuto('eteled2')
+     end
+
+     if curStep == 416 then
+         changeBFAuto('baldigrr')  
+     end
+
+     if curStep == 448 then
+         changeDadAuto('majin-new')
+         setupNoteSplash('-majin')
+     end
+
+     if curStep == 480 then
+         changeBFAuto('sunky')
+     end
   
-        setProperty('boyfriend1.alpha', 0)
-    end
+	if curStep == 515 then
+         useDoubleDadIcons = true
+         useDoubleBFIcons = true
 
+         cameraFlash('game', '0xFFFFFFFF', 0.7, true)
+
+         makeLuaCharacter('dad1', 'dad', false, false)
+         changeDadAuto('mom')
+         setProperty('iconP4.alpha', 1)
+
+         makeLuaCharacter('boyfriend1', 'bf-gfV2', true, false)
+         changeBFAuto('bf')
+         setProperty('iconP3.alpha', 1)
+    end
 
 	if curStep == 576 then 
-        makeLuaCharacter('dad1', 'ruv', false, false)
-        setProperty('dad1.x', getProperty('dad1.x') + 200)
-        setObjectOrder('dad1', getObjectOrder('dad') - 1)
-
-        makeHealthIcon('dadIcon1', 'ruv', false)
-        setObjectOrder('dadIcon1', getObjectOrder('iconP2') + 1)
-        setProperty('dadIcon1.alpha', 2)
-
-        setProperty('dad1.alpha', 0)
+         changeLuaCharacter('dad1', 'ruv') 
+         changeDadAuto('sarvente')
+	    changeAddedIcon('iconP4', getProperty('dad1.healthIcon'))
     end
 
-	if curStep == 576 then -- part 2
-        playDadSing = true
-        setProperty('dad1.alpha', 1)
-    end
-
-	if curStep == 608 then -- part 1
+	if curStep == 608 then
         makeLuaCharacter('boyfriend1', 'carol', true, false)
 	   setProperty('boyfriend1.x', getProperty('boyfriend1.x') + 200)
         setObjectOrder('boyfriend1', getObjectOrder('boyfriend') - 1)
@@ -139,12 +180,7 @@ function onStepHit(step)
         setProperty('boyfriend1.alpha', 0)
     end
 
-	if curStep == 608 then -- part 2
-        playBFSing = true
-        setProperty('boyfriend1.alpha', 1)
-    end
-
-	if curStep == 640 then -- part 1
+	if curStep == 640 then
         makeLuaCharacter('dad1', 'agoti', false, false)
         setProperty('dad1.x', getProperty('dad1.x') + 200)
         setObjectOrder('dad1', getObjectOrder('dad') - 1)
@@ -156,12 +192,7 @@ function onStepHit(step)
         setProperty('dad1.alpha', 1)
     end
 
-	if curStep == 640 then -- part 2
-        playDadSing = true
-        setProperty('dad1.alpha', 1)
-    end
-
-	if curStep == 672 then -- part 1
+	if curStep == 672 then
         makeLuaCharacter('boyfriend1', 'ruby', true, false)
 	   setProperty('boyfriend1.x', getProperty('boyfriend1.x') + 200)
         setObjectOrder('boyfriend1', getObjectOrder('boyfriend') - 1)
@@ -171,11 +202,6 @@ function onStepHit(step)
         setProperty('bfIcon1.alpha', 0)
   
         setProperty('boyfriend1.alpha', 0)
-    end
-
-	if curStep == 672 then -- part 2
-        playBFSing = true
-        setProperty('boyfriend1.alpha', 1)
     end
 end
 
