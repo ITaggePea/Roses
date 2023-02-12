@@ -1,0 +1,12 @@
+0 pixel dad
+0 pixel bf
+4 normal dad
+4 normal bf
+8 holofunk dad
+12 normal dad
+28 majin dad
+32 normal dad
+42 Cj-Ruby bf
+
+
+
